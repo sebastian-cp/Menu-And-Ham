@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	transition: 0.7s;
+	z-index: 3;
+}
+
+header.down {
+	background-color: #000;
+	opacity: 0.8;
+	padding: 15px 20px;
+
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
+}
+
+.menu-links {
+	display: flex;
+	padding: 0;
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 8vh;
+}
+
+.ham {
+	display: none;
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ham span {
+	background-color: #fff;
+	display: block;
+	height: 3px;
+	width: 28px;
+	margin: 10px auto;
+	border-radius: 2px;
+}
+
+.menu-links li {
+	padding: 0 40px;
+	list-style-type: none;
+	transition: 0.3s;
+}
+
+.menu-links li a {
+	text-decoration: none;
+	font-size: 1.4rem;
+	color: #fff;
+	font-weight: 600;
+}
+
+.menu-links a:hover {
+	color: #ef8354
+}
+
+header.down .logo,
+header.down ul li a {
+	color: #fff;
+
+}
+
+@media (max-width: 800px) {
+
+	body {
+		overflow: auto;
+	}
+
+	.ham {
+		display: block;
+		cursor: pointer;
+		position: absolute;
+		top: 15px;
+		right: 25px;
+		transition: 0.2s 0.1s;
+
+	}
+
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+		padding-top: 60px;
+		padding-bottom: 25px;
+	}
+
+	.logo {
+		padding-left: 25px;
+		width: auto;
+		position: absolute;
+		top: 15px;
+		left: 1px;
+	}
+
+	.menu-links {
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 92vh;
+		margin: 0;
+		padding: 0;
+		display: none;
+		opacity: 0;
+		transition: opacity 5s ease-out;
+		width: 100%;
+	}
+
+	.menu-links li {
+		text-align: center;
+		width: 100%;
+		padding: 20px;
+	}
+}
+
+@keyframes muestraMenu {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0.8;
+	}
+}
+
+.menu-links.activated {
+	display: flex;
+	animation: muestraMenu 350ms ease-in-out both;
+	background-color: #000;
+}
+
+.br-1.animated {
+	transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.br-2.animated {
+	opacity: 0;
+}
+
+.br-3.animated {
+	transform: rotate(45deg) translate(-10px, -8px);
+}
+
+.ham.rotate:hover {
+	transform: rotate(360deg);
+}

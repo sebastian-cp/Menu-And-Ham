@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+	background-image: url("../multimedia/background.jpg");
+	background-size: cover;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+main {
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 700px;
+	width: 100%;
+	padding: 40px;
+}
+
+.section {
+	text-align: justify;
+	color: #f0f0f0;
+}
+
+.subtitle {
+	color: #f0f0f0;
+}
+
+.page {
+	color: #f0f0f0;
+	text-align: center;
+	padding: 5%;
+}
+
+.img {
+	color: #f0f0f0;
+	padding: 0.3%;
+	margin: 2%;
+	display: flex;
+	border-radius: 5px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+@media screen and (max-width: 1628px) {
+	body {
+		transition: 0s;
+		background-image: url("../multimedia/background.jpg");
+		background-size: cover;
+		background-repeat:no-repeat;
+		background-position: center center;
+	}
+
+	.img {
+		width: 270px;
+		height: auto;
+	}
+}
